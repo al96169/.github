@@ -1,0 +1,13 @@
+# 保留空白 Issue：本文件是账号级默认，会作用于所有仓库
+# （含无关项目），不宜强制只能用模板。
+blank_issues_enabled: true
+contact_links:
+  - name: 🔒 报告安全漏洞（请勿公开提交）
+    url: https://github.com/al96169/.github/blob/main/SECURITY.md
+    about: 安全漏洞请按安全策略私下报告，不要开公开 Issue
+  - name: 📖 项目文档
+    url: https://github.com/al96169/wo-bot-wiki
+    about: 方案、协议、开发规范与踩坑记录
+  - name: 💬 使用问题 / 讨论
+    url: https://github.com/al96169/wo-bot-wiki/issues
+    about: 不确定是不是 Bug 时，欢迎先来讨论

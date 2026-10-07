@@ -1,0 +1,66 @@
+name: Bug 报告
+description: 报告一个可复现的问题
+title: "[Bug] "
+# 注意：此处刻意不设置 labels —— 若设了标签，该标签必须在所有使用本模板的仓库中都存在，
+# 否则提交会报错。见 .github 仓库的 README 说明。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！请尽量填写完整，**可复现的最小步骤**是定位问题的关键。
+
+        ⚠️ **安全漏洞请勿在此公开提交**，请按 [SECURITY.md](https://github.com/al96169/.github/blob/main/SECURITY.md) 私下报告。
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 问题描述
+      description: 发生了什么？你期望发生什么？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 越具体越好；如果是偶现，请说明出现频率与触发条件
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本 / 提交号
+      placeholder: 例如 v1.1.2 或 commit 5754006
+    validations:
+      required: false
+  - type: textarea
+    id: env
+    attributes:
+      label: 运行环境
+      description: 操作系统、运行方式、相关硬件或浏览器版本
+      placeholder: |
+        例如：
+        - 机器端：Jetson Nano，L4T R32.7.5，Python 3.7.5
+        - 浏览器：Chrome 131 / Safari 17
+        - 部署方式：本地 / 云端信令
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: 日志 / 报错 / 截图
+      description: 相关日志或堆栈。**请先移除敏感信息**（Token、密码、服务器地址）
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 提交前确认
+      options:
+        - label: 我已检索过现有 Issue，确认不是重复问题
+          required: true
+        - label: 我已移除日志中的敏感信息（Token、密码、服务器地址等）
+          required: true
